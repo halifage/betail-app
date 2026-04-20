@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd packages/field-kit && npm run build",
-  "outputDirectory": "packages/field-kit/dist",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
