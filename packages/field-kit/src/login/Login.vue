@@ -111,7 +111,7 @@ export default {
           this.authPending = false;
           return updateConfigDocs()
             .then(updateProfile)
-            .then(updateFieldModules)
+            .then(() => updateFieldModules().catch(() => {}))  // non-blocking; farmOS may not expose field_module via JSON:API
             .then(refreshCache)
             .then(() => {
               this.updatesPending = false;
