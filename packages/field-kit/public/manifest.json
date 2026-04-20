@@ -1,8 +1,8 @@
 {
-  "name": "farmOS Field Kit",
-  "short_name": "farmOS",
-  "theme_color": "#336633",
-  "background_color": "#ffffff",
+  "name": "Betail",
+  "short_name": "Betail",
+  "theme_color": "#2c6e49",
+  "background_color": "#f8f9fa",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",

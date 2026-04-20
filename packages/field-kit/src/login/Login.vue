@@ -126,7 +126,9 @@ export default {
     },
   },
   created() {
-    this.url = getHost()?.replace(/(^\w+:|^)\/\//, '') || '';
+    this.url = getHost()?.replace(/(^\w+:|^)\/\//, '')
+      || import.meta.env.VITE_FARMOS_HOST
+      || '';
   },
 };
 
