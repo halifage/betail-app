@@ -1,6 +1,6 @@
 <template>
   <farm-main>
-    <app-bar-options title="Health Event" />
+    <app-bar-options title="Health Event" nav="back" />
     <div class="form-container">
       <farm-card>
         <farm-stack space="s">

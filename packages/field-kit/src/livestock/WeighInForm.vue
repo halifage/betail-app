@@ -1,6 +1,6 @@
 <template>
   <farm-main>
-    <app-bar-options title="Add Weight" />
+    <app-bar-options title="Add Weight" nav="back" />
     <div class="form-container">
       <farm-card>
         <farm-stack space="s">

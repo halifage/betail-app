@@ -1,6 +1,6 @@
 <template>
   <farm-main>
-    <app-bar-options title="New Animal" />
+    <app-bar-options title="New Animal" nav="back" />
     <div class="form-container">
       <farm-card>
         <farm-stack space="s">
@@ -123,7 +123,7 @@ export default {
         }
         const ref = this.add('asset', 'animal', fields);
         await this.commit(ref);
-        this.$router.push('/home');
+        this.$router.replace('/home');
       } catch (e) {
         this.error = e.message || 'Failed to save. Try again.';
       } finally {

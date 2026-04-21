@@ -1,6 +1,6 @@
 <template>
   <farm-main>
-    <app-bar-options :title="animal.name || 'Animal'" />
+    <app-bar-options :title="animal.name || 'Animal'" nav="back" />
     <div class="detail-container">
       <farm-stack space="s">
 
