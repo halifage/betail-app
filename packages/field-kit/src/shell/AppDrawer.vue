@@ -17,11 +17,6 @@
       </div>
     </header>
     <farm-list>
-      <farm-list-item @click="handleRoute('/home')" :clickable="true">
-        {{ $t('Home') }}
-      </farm-list-item>
-    </farm-list>
-    <farm-list>
       <farm-list-item :clickable="true" @click="handleRoute('/home')">
         Animals
       </farm-list-item>
@@ -77,11 +72,10 @@
 
 <script>
 import profile from '../farm/profile';
-import settings from './settings';
 import { version } from '../../package.json';
 
 export default {
-  name: 'App',
+  name: 'AppDrawer',
   expose: ['openDrawer'],
   emits: ['close'],
   data() {
@@ -89,7 +83,6 @@ export default {
       show: false,
       user: profile.user,
       farm: profile.farm,
-      settings,
       version,
     };
   },
