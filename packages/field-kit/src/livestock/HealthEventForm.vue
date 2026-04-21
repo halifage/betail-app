@@ -69,7 +69,7 @@ export default {
     const route = useRoute();
     const { add, commit, checkout } = useEntities();
     const animalId = route.params.id;
-    const animal = checkout('asset', 'animal', animalId);
+    const animal = checkout('asset', 'asset--animal', animalId);
     return { add, commit, animal, animalId };
   },
   data() {
@@ -116,7 +116,7 @@ export default {
           fields.notes = { value: notesText, format: 'default' };
         }
 
-        const ref = this.add('log', 'activity', fields);
+        const ref = this.add('log', 'log--activity', fields);
         await this.commit(ref);
         this.$router.push(`/animals/${this.animalId}`);
       } catch (e) {

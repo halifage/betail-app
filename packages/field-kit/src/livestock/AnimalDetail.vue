@@ -81,7 +81,7 @@ export default {
     const route = useRoute();
     const { checkout } = useEntities();
     const animalId = route.params.id;
-    const animal = checkout('asset', 'animal', animalId);
+    const animal = checkout('asset', 'asset--animal', animalId);
     const allLogs = checkout('log', { 'asset.id': animalId });
     return { animal, allLogs, animalId };
   },

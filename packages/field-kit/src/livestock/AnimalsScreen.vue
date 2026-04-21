@@ -45,7 +45,7 @@ export default {
   name: 'AnimalsScreen',
   setup() {
     const { checkout } = useEntities();
-    const animals = checkout('asset', { type: 'animal', status: 'active' });
+    const animals = checkout('asset', { type: 'asset--animal', status: 'active' });
     return { animals };
   },
   methods: {

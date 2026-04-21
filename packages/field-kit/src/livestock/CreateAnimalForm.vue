@@ -80,7 +80,7 @@ export default {
   name: 'CreateAnimalForm',
   setup() {
     const { add, commit, checkout } = useEntities();
-    const animalTypes = checkout('taxonomy_term', { type: 'animal_type' });
+    const animalTypes = checkout('taxonomy_term', { type: 'taxonomy_term--animal_type' });
     return { add, commit, animalTypes };
   },
   data() {
@@ -121,7 +121,7 @@ export default {
         if (this.form.tagId.trim()) {
           fields.tag = [{ id: this.form.tagId.trim(), tag_type: 'eid' }];
         }
-        const ref = this.add('asset', 'animal', fields);
+        const ref = this.add('asset', 'asset--animal', fields);
         await this.commit(ref);
         this.$router.replace('/home');
       } catch (e) {

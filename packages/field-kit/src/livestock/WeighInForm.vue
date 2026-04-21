@@ -54,7 +54,7 @@ export default {
     const route = useRoute();
     const { add, commit, checkout } = useEntities();
     const animalId = route.params.id;
-    const animal = checkout('asset', 'animal', animalId);
+    const animal = checkout('asset', 'asset--animal', animalId);
     return { add, commit, animal, animalId };
   },
   data() {
@@ -77,7 +77,7 @@ export default {
         const [y, m, d] = this.form.date.split('-').map(Number);
         const timestamp = Math.floor(new Date(y, m - 1, d, 12, 0, 0).getTime() / 1000);
         const animalName = this.animal.name || 'Animal';
-        const ref = this.add('log', 'observation', {
+        const ref = this.add('log', 'log--observation', {
           name: `Weight: ${weight} kg`,
           timestamp,
           status: 'done',
