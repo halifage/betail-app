@@ -1,22 +1,12 @@
 <template>
-  <farm-main>
-    <app-bar-options :title="$t('Home')"/>
-    <home-widgets :modules="modules"/>
-  </farm-main>
+  <animals-screen />
 </template>
 
 <script>
-import fieldModules from '../field-modules';
-import HomeWidgets from './HomeWidgets';
+import AnimalsScreen from '../livestock/AnimalsScreen.vue';
 
 export default {
   name: 'HomeScreen',
-  components: { HomeWidgets },
-  data() {
-    return {
-      modules: fieldModules,
-    };
-  },
+  components: { AnimalsScreen },
 };
-
 </script>

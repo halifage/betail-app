@@ -22,12 +22,11 @@
       </farm-list-item>
     </farm-list>
     <farm-list>
-      <farm-list-item
-        v-for="mod in modules"
-        :key="`${mod.name}-menu-link`"
-        :clickable="true"
-        @click="handleRoute(mod.routes[0].path)">
-        {{ $t(mod.label) }}
+      <farm-list-item :clickable="true" @click="handleRoute('/home')">
+        Animals
+      </farm-list-item>
+      <farm-list-item :clickable="true" @click="handleRoute('/animals/new')">
+        Add Animal
       </farm-list-item>
     </farm-list>
     <farm-list>
@@ -77,7 +76,6 @@
 </template>
 
 <script>
-import fieldModules from '../field-modules';
 import profile from '../farm/profile';
 import settings from './settings';
 import { version } from '../../package.json';
@@ -91,7 +89,6 @@ export default {
       show: false,
       user: profile.user,
       farm: profile.farm,
-      modules: fieldModules,
       settings,
       version,
     };
